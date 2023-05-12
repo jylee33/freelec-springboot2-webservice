@@ -1,4 +1,4 @@
-package com.jojoldu.book.springboot.controller;
+package com.jojoldu.book.springboot.web;
 
 import org.junit.Test;
 import org.junit.runner.RunWith;
