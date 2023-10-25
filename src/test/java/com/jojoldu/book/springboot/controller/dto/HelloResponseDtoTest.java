@@ -1,4 +1,4 @@
-package com.jojoldu.book.springboot.web.dto;
+package com.jojoldu.book.springboot.controller.dto;
 
 import org.junit.Test;
 import static org.assertj.core.api.Assertions.assertThat;

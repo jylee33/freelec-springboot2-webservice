@@ -1,9 +1,9 @@
-package com.jojoldu.book.springboot.web;
+package com.jojoldu.book.springboot.controller;
 
 import com.jojoldu.book.springboot.domain.posts.Posts;
 import com.jojoldu.book.springboot.domain.posts.PostsRepository;
-import com.jojoldu.book.springboot.web.dto.PostsSaveRequestDto;
-import com.jojoldu.book.springboot.web.dto.PostsUpdateRequestDto;
+import com.jojoldu.book.springboot.controller.dto.PostsSaveRequestDto;
+import com.jojoldu.book.springboot.controller.dto.PostsUpdateRequestDto;
 import org.junit.After;
 import org.junit.Test;
 import org.junit.runner.RunWith;
