@@ -13,6 +13,7 @@ public class HelloController {
         return "hello";
     }
 
+    // http://localhost:8081/hello/dto?name=jay&amount=100
     @GetMapping("/hello/dto")
     public HelloResponseDto helloDto(@RequestParam("name") String name,
                                      @RequestParam("amount") int amount) {
