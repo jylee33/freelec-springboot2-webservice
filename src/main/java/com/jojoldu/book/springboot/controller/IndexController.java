@@ -1,5 +1,6 @@
 package com.jojoldu.book.springboot.controller;
 
+import com.jojoldu.book.springboot.config.auth.LoginUser;
 import com.jojoldu.book.springboot.config.auth.dto.SessionUser;
 import com.jojoldu.book.springboot.controller.dto.PostsResponseDto;
 import com.jojoldu.book.springboot.services.posts.PostsService;
@@ -18,13 +19,26 @@ public class IndexController {
     private final PostsService postsService;
     private final HttpSession httpSession;
 
+//    @GetMapping("/")
+//    public String index(Model model) {
+//        System.out.println("Called index ------------------");
+//
+//        model.addAttribute("posts", postsService.findAllDesc());
+//
+//        SessionUser user = (SessionUser) httpSession.getAttribute("user");
+//        if (user != null) {
+//            model.addAttribute("userName", user.getName());
+//        }
+//
+//        return "index";
+//    }
+
     @GetMapping("/")
-    public String index(Model model) {
+    public String index(Model model, @LoginUser SessionUser user) {
         System.out.println("Called index ------------------");
 
         model.addAttribute("posts", postsService.findAllDesc());
 
-        SessionUser user = (SessionUser) httpSession.getAttribute("user");
         if (user != null) {
             model.addAttribute("userName", user.getName());
         }
